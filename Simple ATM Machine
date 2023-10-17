@@ -1,0 +1,59 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class BankDetails{
+
+    public:
+
+    int AccNumber;
+    char HolderName[50];
+    double Balance;
+
+    int DepositeAmt;
+    int WithdrawAmt;
+void Deposit(){
+        
+        cout<< "Enter the Amount to deposit: ";
+        
+        cin>> DepositeAmt;
+        Balance = Balance + DepositeAmt;
+        
+        cout<< "\nMoney in account = " << Balance ;
+    };
+void Withdraw(){
+        
+        cout<< "\nEnter the withdraw Amount : ";
+        
+        cin>> WithdrawAmt;
+        
+        if (Balance > WithdrawAmt)
+        {
+            Balance = Balance - WithdrawAmt;
+        }
+        else{
+            cout<< "\nBalance Insufficient";
+        }
+        cout<< "\nMoney in account now = " << Balance;
+        
+    };
+void DisplayInfo(){
+    
+        cin>> AccNumber;
+        cin>> HolderName;
+
+        cout<< AccNumber;
+        cout<< HolderName;
+
+        cout<< Balance;
+    }
+};
+int main(){
+    cout<<"Yuvashri Simple ATM Machine \n";
+
+    BankDetails Customer1;
+
+    Customer1.Deposit();
+    Customer1.Withdraw();
+    Customer1.DisplayInfo();
+    
+}
