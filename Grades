@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float assign;
+    float quiz;
+    float exam;
+    int avg_assign,avg_quiz,avg_exam,avg;
+    cout<<"Yuvashri- grade calculator \n";
+    cout<<"Enter assignment grade:";
+    cin>>assign;
+    if(assign<0 || assign>100){
+        cout<<"Enter valid input:";
+        cin>>assign;
+    }
+    cout<<"Enter quiz grade:";
+    cin>>quiz;
+    if(quiz<0 || quiz>100){
+        cout<<"Enter valid input:";
+        cin>>quiz;
+    }
+    cout<<"Enter exam grade:";
+    cin>>exam;
+    if(exam<0 || exam>100){
+        cout<<"Enter valid input:";
+        cin>>exam;
+    }
+    avg_assign=(assign*40/100);
+    avg_quiz=(quiz*30/100);
+    avg_exam=(exam*30/100);
+    avg=avg_assign+avg_quiz+avg_exam;
+    cout<<"The avergade is: "<<avg;
+    if(avg>=80 && avg<=100){
+        cout<<"\nStudent grade is A";
+    }
+    else if(avg>=60 && avg<80){
+        cout<<"\nStudent grade is B";
+    }
+    else if(avg>=40 && avg<60){
+        cout<<"\nStudent grade is C";
+    }
+    else{
+        cout<<"\nStudent grade is D";
+    }
+    
+    
+}
